@@ -30,11 +30,11 @@ ul li {
     flex-direction: column;
 
 }
-.wrapper {
+.row {
     display: flex;
 }
 .container {
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 0 auto;
 }
 section {
@@ -49,49 +49,50 @@ section {
 
 /* HEADER */
 .main-header {
-    padding: 1rem;
     background-color: #ADD8E7;
 }
-.main-header .wrapper {
+.header-top {
+    padding: 1rem;
+}
+.header-top .row {
     background-color: #DAA51E;
 }
-.main-header .box {
+.header-top .box {
     min-height: auto;
 }
-.main-header .logo {
+.header-top .logo {
     flex: 1 1 0;
     padding: .5rem;
 }
-.main-header .menu {
+.header-top .menu {
     flex: 3 1 0;
     padding: .5rem;
 }
-.main-header .menu ul {
+.header-top .menu ul {
     display: flex;
     justify-content: center;
 }
-.main-header .menu a {
+.header-top .menu a {
     padding: .25rem;
 }
-.main-header .login {
+.header-top .login {
     flex: 1 1 0;
     padding: .5rem;
     text-align: end;
 }
-
+.header-bottom {
+    background-color: #00018B;
+}
+.hero .box {
+    background-color: #EF82ED;
+    min-height: 50vh;
+}
 
 
 /* MAIN */
 main {
     /* padding: 1rem; */
     flex-grow: 1;
-}
-.hero {
-    background-color: #00018B;
-}
-.hero .box {
-    background-color: #EF82ED;
-    min-height: 33vh;
 }
 .left .box,
 .right .box {
@@ -101,20 +102,19 @@ main {
     max-width: 80%;
     margin: 0 auto;
 }
-.box-accent {
-    flex: 1 1 66%;
+.col-60 {
+    flex: 1 1 60%;
     background-color: #1E90FF;
 }
-.box-neutral {
-    flex: 1 1 33%;
+.col-40 {
+    flex: 1 1 40%;
     background-color: #FFC0CA;
 }
-.right .box-accent {
-    order: 1;
-}
-.right,
-.big {
+main section:nth-child(even) {
     background-color: #D3D3D3;
+}
+main section:nth-child(even) .box-accent {
+    order: 1;
 }
 .big .box {
     min-height: 75vh;
@@ -132,27 +132,31 @@ main {
     padding: .5rem 0 0;
     background-color: #23272A;
 }
-.footer-top {
+/* .footer-top {
+} */
+/* .footer-top .row {
+} */
+.col-30 {
     min-height: 66vh;
-}
-.footer-top > :first-child {
     flex: 1 1 30%;
     background-color: #F08180;
 }
-.footer-top .wrapper {
+.col-70 {
     flex: 1 1 70%;
     background-color: #20B3AA;
 }
-.footer-top .wrapper .box {
+.footer-top .row .box {
     flex: 1 1 25%;
     color: #fff;
 }
 .footer-bottom {
     margin-top: 2rem;
     padding: 1rem 0;
+    background-color: #7FFFD2;
+}
+.footer-bottom .row {
     justify-content: space-between;
     align-items: center;
-    background-color: #7FFFD2;
 }
 .footer-bottom .box {
     min-height: auto;
