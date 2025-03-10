@@ -35,6 +35,9 @@ img {
 .row {
     display: flex;
 }
+.col-100 {
+    flex: 1 0 100%;
+}
 .col-60 {
     flex: 1 1 60%;
     /* Debug */
@@ -46,12 +49,14 @@ img {
     /* background-color: #FFC0CA; */
 }
 .col-30 {
-    min-height: 66vh;
     flex: 1 1 30%;
+    /* Debug */
     background-color: #F08180;
+    min-height: 66vh !important;
 }
 .col-70 {
     flex: 1 1 70%;
+    /* Debug */
     background-color: #20B3AA;
 }
 section {
@@ -75,6 +80,10 @@ section {
     background-color: #23272A;
     color: #fff;
 }
+.btn-info {
+    background-color: #7289DA;
+    color: #fff;
+}
 
 
 
@@ -91,11 +100,6 @@ section {
 .box-small {
     max-width: 80%;
     margin: 0 auto;
-}
-.box-big {
-    width: 100%;
-    margin: 0 auto;
-    background-color: #218B21;
 }
 
 
@@ -180,6 +184,9 @@ main {
     /* padding: 1rem; */
     flex-grow: 1;
 }
+main img {
+    width: 100%;
+}
 /* Spostare tra regole debug */
 /* .left .box,
 .right .box {
@@ -199,7 +206,7 @@ main section:nth-child(even) .col-60 {
 }
 main h3 {
     font-size: 3.5rem;
-    letter-spacing: .25rem;
+    letter-spacing: .1rem;
     /* La seguente regola è inserita solo se NON posso modificare le immagini per rimuovere la fascia bianca in alto */
     /* Il margine che inserisco serve a allineare il titolo all'immagine */
     /* NB: A mio avviso la soluzione corretta per esssere certi dell'allineamento è ritagliare l'immagine e lasciare che i due elementi si allineino naturalmente */
@@ -213,9 +220,30 @@ main p {
     line-height: 1.5em;
     /* margin: 0 0 1.33rem; */
 }
-.big .box {
-    min-height: 75vh;
+section.big h3,
+section.big p,
+section.big .container:last-child {
+    text-align: center;
 }
+main h4 {
+    font-size: 2rem;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+.bg-stars {
+    background-image: url(../img/stars.svg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+}
+section.big .btn {
+    display: inline-block;
+    margin: 0 auto;
+}
+/* Spostare in regole di debug */
+/* .big .box {
+    min-height: 75vh;
+} */
 
 
 
