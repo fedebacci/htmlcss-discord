@@ -169,9 +169,9 @@ section {
     /* debug */ 
     /* border: 2px dashed red; */
 }
-.hero .box {
+.hero .container > div {
     text-align: center;
-    padding: 0 7.5rem;
+    padding: 0 12.5rem;
     /* Regole debug */
     /* background-color: #EF82ED; */
     /* min-height: 50vh; */
