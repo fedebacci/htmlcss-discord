@@ -22,6 +22,10 @@ img {
 
 
 /* UTILITY */
+/* Unico titolo messo qui perchè unico titolo usato in più macroaree */
+h4 {
+    font-size: 2rem;
+}
 .page-wrapper {
     min-height: 100vh;
     display: flex;
@@ -51,13 +55,16 @@ img {
 .col-30 {
     flex: 1 1 30%;
     /* Debug */
-    background-color: #F08180;
-    min-height: 66vh !important;
+    /* background-color: #F08180; */
+    /* min-height: 66vh !important; */
 }
 .col-70 {
     flex: 1 1 70%;
     /* Debug */
-    background-color: #20B3AA;
+    /* background-color: #20B3AA; */
+}
+.col-25 {
+    flex: 1 1 25%;
 }
 section {
     padding: 7.5rem 0;
@@ -226,7 +233,6 @@ section.big .container:last-child {
     text-align: center;
 }
 main h4 {
-    font-size: 2rem;
     padding: 1rem;
     margin-bottom: 2rem;
 }
@@ -250,17 +256,45 @@ section.big .btn {
 
 /* FOOTER */
 .page-footer {
-    padding: .5rem 0 0;
+    padding: 5rem 0 0;
     background-color: #23272A;
-}
-.footer-top .row .box {
-    flex: 1 1 25%;
+    
     color: #fff;
 }
+.page-footer h4,
+.page-footer h5 {
+    color: #7289DA; 
+}
+.page-footer h4 {
+    margin-bottom: 1rem;
+}
+.select-language {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.select-language img {
+    max-width: 1.75rem;
+    margin-right: .5rem;
+}
+.footer-social-menu li {
+    display: inline-block;
+    margin-right: .5rem;
+}
+.page-footer h5 {
+    font-size: 1.1rem;
+    line-height: normal;
+}
+.footer-menu a {
+    display: inline-block;
+    margin: 1rem 0;
+}
 .footer-bottom {
-    margin-top: 2rem;
     padding: 1rem 0;
-    background-color: #7FFFD2;
+    border-top: 1px solid #7289DA;
+    margin: 2rem 0;
+    /* margin-top: 2rem; */
+    /* background-color: #7FFFD2; */
 }
 .footer-bottom .row {
     justify-content: space-between;
