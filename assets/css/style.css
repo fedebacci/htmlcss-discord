@@ -15,6 +15,9 @@ a {
 ul li {
     list-style-type: none;
 }
+img {
+    max-width: 100%;
+}
 
 
 
@@ -34,11 +37,13 @@ ul li {
 }
 .col-60 {
     flex: 1 1 60%;
-    background-color: #1E90FF;
+    /* Debug */
+    /* background-color: #1E90FF; */
 }
 .col-40 {
     flex: 1 1 40%;
-    background-color: #FFC0CA;
+    /* Debug */
+    /* background-color: #FFC0CA; */
 }
 .col-30 {
     min-height: 66vh;
@@ -50,7 +55,7 @@ ul li {
     background-color: #20B3AA;
 }
 section {
-    padding: 2rem 0;
+    padding: 7.5rem 0;
 }
 .btn {
     border: 0;
@@ -82,6 +87,15 @@ section {
 .box {
     min-height: 10vh;
     border: 1px dashed;
+}
+.box-small {
+    max-width: 80%;
+    margin: 0 auto;
+}
+.box-big {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #218B21;
 }
 
 
@@ -160,33 +174,49 @@ section {
 }
 
 
+
 /* MAIN */
 main {
     /* padding: 1rem; */
     flex-grow: 1;
 }
-.left .box,
+/* Spostare tra regole debug */
+/* .left .box,
 .right .box {
     min-height:50vh;
+} */
+main .row {
+    gap: 3rem;
 }
-.box-small {
-    max-width: 80%;
-    margin: 0 auto;
+main section:nth-child(odd) .col-60 {
+    text-align: end;
 }
 main section:nth-child(even) {
-    background-color: #D3D3D3;
+    background-color: #F6F6F6;
 }
-main section:nth-child(even) .box-accent {
+main section:nth-child(even) .col-60 {
     order: 1;
+}
+main h3 {
+    font-size: 3.5rem;
+    letter-spacing: .25rem;
+    /* La seguente regola è inserita solo se NON posso modificare le immagini per rimuovere la fascia bianca in alto */
+    /* Il margine che inserisco serve a allineare il titolo all'immagine */
+    /* NB: A mio avviso la soluzione corretta per esssere certi dell'allineamento è ritagliare l'immagine e lasciare che i due elementi si allineino naturalmente */
+    margin-top: 2rem;
+}
+main p {
+    margin: 1.5em 0;
+    /* Sono come hero .p */
+    /* Capire se mettere a tutti i p o comunque assimilare due regole */
+    font-size: 1.33rem;
+    line-height: 1.5em;
+    /* margin: 0 0 1.33rem; */
 }
 .big .box {
     min-height: 75vh;
 }
-.box-big {
-    width: 100%;
-    margin: 0 auto;
-    background-color: #218B21;
-}
+
 
 
 
