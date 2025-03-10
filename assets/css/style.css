@@ -19,26 +19,65 @@ ul li {
 
 
 /* UTILITY */
-.debug, 
-.debug * {
-    border: 2px dashed red;
-    background-color: #ff000022;
-}
 .page-wrapper {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 
 }
-.row {
-    display: flex;
-}
 .container {
     max-width: 1300px;
     margin: 0 auto;
 }
+.row {
+    display: flex;
+}
+.col-60 {
+    flex: 1 1 60%;
+    background-color: #1E90FF;
+}
+.col-40 {
+    flex: 1 1 40%;
+    background-color: #FFC0CA;
+}
+.col-30 {
+    min-height: 66vh;
+    flex: 1 1 30%;
+    background-color: #F08180;
+}
+.col-70 {
+    flex: 1 1 70%;
+    background-color: #20B3AA;
+}
 section {
     padding: 2rem 0;
+}
+.btn {
+    border: 0;
+    font-size: 1rem;
+    border-radius: 2em;
+    padding: .75em  1em;
+    font-weight: 500;
+}
+.btn-big {
+    font-size: 1.5rem;
+}
+.btn-primary {
+    background-color: #fff;
+    color: #222;
+}
+.btn-secondary {
+    background-color: #23272A;
+    color: #fff;
+}
+
+
+
+/* DEBUG */
+.debug, 
+.debug * {
+    border: 2px dashed red;
+    background-color: #ff000022;
 }
 .box {
     min-height: 10vh;
@@ -49,43 +88,75 @@ section {
 
 /* HEADER */
 .main-header {
-    background-color: #ADD8E7;
+    background-color: #255EE9;
+    color: #fff;
 }
 .header-top {
     padding: 1rem;
 }
-.header-top .row {
-    background-color: #DAA51E;
+.header-top .row > * {
+    display: flex;
+    align-items: center;
 }
+/* Regola sotto da spostare in debug */
 .header-top .box {
     min-height: auto;
 }
 .header-top .logo {
     flex: 1 1 0;
-    padding: .5rem;
+}
+.header-top .logo img {
+    min-height: 2.5rem;
 }
 .header-top .menu {
     flex: 3 1 0;
     padding: .5rem;
 }
 .header-top .menu ul {
+    width: 100%;
     display: flex;
     justify-content: center;
 }
 .header-top .menu a {
-    padding: .25rem;
+    padding: 1.5rem;
+    font-weight: 500;
 }
 .header-top .login {
     flex: 1 1 0;
+    justify-content: flex-end;
     padding: .5rem;
-    text-align: end;
 }
-.header-bottom {
+/* Regola sotto da spostare in debug */
+/* .header-bottom {
     background-color: #00018B;
+} */
+.hero {
+    background-image: url(../img/jumbo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+.hero .container {
+    padding: 7rem 0;
+
+    /* debug */ 
+    /* border: 2px dashed red; */
 }
 .hero .box {
-    background-color: #EF82ED;
-    min-height: 50vh;
+    text-align: center;
+    padding: 0 7.5rem;
+    /* Regole debug */
+    /* background-color: #EF82ED; */
+    /* min-height: 50vh; */
+}
+.hero h2 {
+    font-size: 3.5rem;
+    margin: 2.5rem 0;
+}
+.hero p {
+    font-size: 1.33rem;
+    line-height: 1.5em;
+    margin: 0 0 1.33rem;
 }
 
 
@@ -101,14 +172,6 @@ main {
 .box-small {
     max-width: 80%;
     margin: 0 auto;
-}
-.col-60 {
-    flex: 1 1 60%;
-    background-color: #1E90FF;
-}
-.col-40 {
-    flex: 1 1 40%;
-    background-color: #FFC0CA;
 }
 main section:nth-child(even) {
     background-color: #D3D3D3;
@@ -131,19 +194,6 @@ main section:nth-child(even) .box-accent {
 .page-footer {
     padding: .5rem 0 0;
     background-color: #23272A;
-}
-/* .footer-top {
-} */
-/* .footer-top .row {
-} */
-.col-30 {
-    min-height: 66vh;
-    flex: 1 1 30%;
-    background-color: #F08180;
-}
-.col-70 {
-    flex: 1 1 70%;
-    background-color: #20B3AA;
 }
 .footer-top .row .box {
     flex: 1 1 25%;
