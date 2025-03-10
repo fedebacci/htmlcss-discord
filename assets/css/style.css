@@ -52,14 +52,16 @@ h4 {
     /* Debug */
     /* background-color: #FFC0CA; */
 }
-.col-30 {
-    flex: 1 1 30%;
+.col-25 {
+    /* flex: 1 1 30%; */
+    flex: 1 1 25%;
     /* Debug */
     /* background-color: #F08180; */
     /* min-height: 66vh !important; */
 }
-.col-70 {
-    flex: 1 1 70%;
+.col-75 {
+    /* flex: 1 1 70%; */
+    flex: 1 1 75%;
     /* Debug */
     /* background-color: #20B3AA; */
 }
@@ -275,6 +277,9 @@ section.big .btn {
 }
 .select-language img {
     max-width: 1.75rem;
+    margin-right: .5rem;
+}
+.select-language span {
     margin-right: .5rem;
 }
 .footer-social-menu li {
